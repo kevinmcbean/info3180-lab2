@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block css %}<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}"/> {% endblock%}
+
+{% block main %}
+<div class = "profile">
+
+    <div class = "header-top-info">
+        <div id="image"> <img id="profilepic" src="{{url_for('static', filename='face.jpeg')}}"/></div>
+        <h1>Kevin McBean</h1>
+        <h6>@kevin_mcbean</h6>
+        <h6>St. Catherine, Jamaica</h6>
+        <h6>{{date_string}}</h6>
+    </div>
+
+    <div class = "header-bottom-info">
+        <h8>I am a guy that like cars and wants to explore the world of Data Science and AI.</h8>
+
+        <div class="container-profile">
+            <div id = "container-info">
+                <div id="post-info">
+                    <h4>3</h4>
+                    <span>Posts</span>
+                </div>
+            </div>
+
+            <div id = "container-info">
+                <div id="following-info">
+                    <h4>1</h4>
+                    <span>Following</span>
+                </div>
+            </div>
+
+            <div id = "container-info">
+                <div id="follower-info">
+                    <h4>7</h4>
+                    <span>Followers</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id = "button">
+        <button type="button" id="btn">Follow</button>
+    </div>
+
+</div>
+
+{% endblock %}
